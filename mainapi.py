@@ -19,6 +19,8 @@ def short(id):
     for i in ids:
         if i == id:
             return redirect(urls[ids.index(i)])
+        if id not in ids:
+            return "Invalid URL"
 
 if __name__ == '__main__':
     app.run()
